@@ -21,11 +21,11 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="text-white bg-cyan-900 px-3 py-4 flex justify-around">
+    <footer className="text-white bg-[#333d6b] px-3 py-4 flex justify-around max-sm:flex-col max-sm:items-center">
       <div className="my-auto">
         <LogoBookmark fill="#ffffff" />
       </div>
-      <nav className="flex gap-4">
+      <nav className="flex gap-4 max-sm:flex-col max-sm:my-4">
         {navLinks.map((e) => (
           <a
             href="#"

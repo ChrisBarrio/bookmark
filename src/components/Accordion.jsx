@@ -6,15 +6,16 @@ import Typography from '@mui/material/Typography';
 
 export default function SimpleAccordion() {
   return (
-    <div className='w-1/2'>
+    <div className="w-1/2 max-sm:w-full max-sm:px-4">
       <Accordion>
         <AccordionSummary
           expandIcon={'↓'}
-          
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>What is Bookmark? </Typography>
+          <Typography sx={{ fontWeight: 'bold' }}>
+            What is Bookmark?{' '}
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -30,7 +31,9 @@ export default function SimpleAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>How can I request a new browser?</Typography>
+          <Typography sx={{ fontWeight: 'bold' }}>
+            How can I request a new browser?
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -45,7 +48,9 @@ export default function SimpleAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Is there a mobile app</Typography>
+          <Typography sx={{ fontWeight: 'bold' }}>
+            Is there a mobile app
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -60,7 +65,9 @@ export default function SimpleAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>What about other Chromium browsers?</Typography>
+          <Typography sx={{ fontWeight: 'bold' }}>
+            What about other Chromium browsers?
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
