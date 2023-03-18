@@ -11,17 +11,17 @@ const navLinks = [
   {
     id: '1',
     name: 'features',
-    href: '#features',
+    href: 'features',
   },
   {
     id: '2',
     name: 'princing',
-    href: '#princing',
+    href: 'princing',
   },
   {
     id: '3',
     name: 'contact',
-    href: '#contact',
+    href: 'contact',
   },
 ];
 
