@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 import LogoBookmark from './iconos/LogoBookmark';
 import IconoFacebook from './iconos/IconoFacebook';
@@ -8,36 +9,43 @@ const navLinks = [
   {
     id: '1',
     name: 'features',
+    href: 'features',
   },
   {
     id: '2',
-    name: 'princing',
+    name: 'faqs',
+    href: 'faqs',
   },
   {
     id: '3',
     name: 'contact',
+    href: 'contact',
   },
 ];
 
 const Footer = () => {
   return (
-    <footer className="text-white bg-[#333d6b] px-3 py-4 flex justify-around max-sm:flex-col max-sm:items-center">
+    <footer className="flex justify-around bg-[#333d6b] px-3 py-4 text-white max-sm:flex-col max-sm:items-center">
       <div className="my-auto">
         <LogoBookmark fill="#ffffff" />
       </div>
-      <nav className="flex gap-4 max-sm:flex-col max-sm:my-4">
+      <nav className="flex gap-4 max-sm:my-4 max-sm:flex-col">
         {navLinks.map((e) => (
-          <a
-            href="#"
+          <Link
+            to={e.href}
             key={e.id}
-            className="uppercase p-1 text-sm text-slate-400 hover:text-[#F94C4C]"
+            spy={true}
+            smooth={true}
+            offset={-10}
+            duration={800}
+            className="p-1 cursor-pointer text-sm uppercase text-slate-400 hover:text-[#F94C4C]"
           >
             {e.name}
-          </a>
+          </Link>
         ))}
       </nav>
-      <div className='flex items-center gap-4'>
-        <a href="#" >
+      <div className="flex items-center gap-4">
+        <a href="#">
           <IconoFacebook />
         </a>
         <a href="#">

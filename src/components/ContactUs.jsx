@@ -2,8 +2,11 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <section  className="flex flex-col items-center gap-4 bg-indigo-500 py-10 text-center text-white">
-      <div className="flex w-1/3 flex-col gap-8 max-sm:w-full max-lg:w-3/4">
+    <section
+      id="contact"
+      className="flex flex-col items-center gap-4 bg-indigo-500 py-10 text-center text-white"
+    >
+      <div className="flex w-1/3 flex-col gap-8 max-lg:w-3/4 max-sm:w-full">
         <p className="text-sm">35.000 + ALREADY JOINED</p>
         <p className="px-16 text-2xl font-semibold max-sm:px-0">
           Stay up-to-date with what we’re doing

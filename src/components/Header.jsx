@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 import svgBookmarkLogo from '../assets/logo-bookmark.svg';
 
@@ -15,8 +16,8 @@ const navLinks = [
   },
   {
     id: '2',
-    name: 'princing',
-    href: 'princing',
+    name: 'faqs',
+    href: 'faqs',
   },
   {
     id: '3',
@@ -43,26 +44,38 @@ const Header = () => {
       >
         {!toggle ? <IconoClose size={40} /> : <IconoHamburguer size={40} />}
       </button>
-        <nav
-          className={
-            !toggle
-              ? `absolute top-20 left-0 z-10 flex h-1/2 w-full flex-col justify-center gap-14  bg-white text-center text-black`
-              : `flex gap-4 max-sm:hidden`
-          }
-        >
-          {navLinks.map((e) => (
-            <a
-              href={e.href}
-              key={e.id}
-              className="p-1 uppercase hover:text-[#F94C4C]"
-            >
-              {e.name}
-            </a>
-          ))}
-          <FormBtn props="LOGIN" />
-        </nav>
+      <NavBar toggle={toggle}/>
     </header>
   );
 };
 
 export default Header;
+
+
+
+export const NavBar = ({toggle}) => {
+  return (
+    <nav
+        className={
+          !toggle
+            ? `absolute top-20 left-0 z-10 flex h-1/2 w-full flex-col justify-center gap-14  bg-white text-center text-black`
+            : `flex gap-4 max-sm:hidden`
+        }
+      >
+        {navLinks.map((e) => (
+          <Link
+            to={e.href}
+            key={e.id}
+            spy={true}
+            smooth={true}
+            offset={-10}
+            duration={800}
+            className="p-1 uppercase hover:text-[#F94C4C]"
+          >
+            {e.name}
+          </Link>
+        ))}
+        <FormBtn props="LOGIN" />
+      </nav>
+  )
+}

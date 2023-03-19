@@ -4,7 +4,7 @@ import Accordion from './Accordion';
 
 const Faqs = () => {
   return (
-    <section className="my-20 flex flex-col items-center gap-4">
+    <section id="faqs" className="my-20 flex flex-col items-center gap-4">
       <h3 className="text-2xl font-bold text-slate-700">
         Frequently Asked Questions
       </h3>
